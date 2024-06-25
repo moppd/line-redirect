@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Redirecting...</title>
+        <script type="text/javascript">
+            // Parse the authorization code from the URL
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code');
+            const state = params.get('state');
+
+            // Redirect to the custom URI scheme
+            if (code) {
+                window.location = `thai-consular://redirect?code=${code}&state=${state}`;
+            } else {
+                // Handle error
+                console.error('Authorization code not found');
+            }
+        </script>
+    </head>
+
+    <body>
+        <p>Redirecting...</p>
+    </body>
+
+</html>
