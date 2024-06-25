@@ -11,7 +11,7 @@
 
             // Redirect to the custom URI scheme
             if (code) {
-                window.location = `thai-consular://Redirect?code=${code}&state=${state}`;
+                window.location = `thai-consular://redirect?code=${code}&state=${state}`;
             } else {
                 // Handle error
                 console.error('Authorization code not found');
